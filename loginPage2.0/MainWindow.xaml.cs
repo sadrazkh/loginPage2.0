@@ -24,5 +24,23 @@ namespace loginPage2._0
         {
             InitializeComponent();
         }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new Modals.PersonContext())
+            {
+                var 
+            }
+        }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new Modals.PersonContext())
+            {
+                db.Persons.Add(new Modals.Person { UserName = UserNameNew.Text, FullName = this.FullName.Text, Email = this.Email.Text, Password = this.PasswordNew.Password, PhoneNumber = this.PhoneNumber.Text });
+                db.SaveChanges();
+                UserNameNew.Text = "";this.FullName.Text = "";this.Email.Text = "";this.PasswordNew.Password = "";this.PhoneNumber.Text = "";
+            }
+        }
     }
 }
