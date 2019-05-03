@@ -156,15 +156,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Manager\ManageThePerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\20190501181227_InitialCreate.cs" />
     <Compile Include="Migrations\20190501181227_InitialCreate.designer.cs">
       <DependentUpon>20190501181227_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190503191001_sadal.cs" />
+    <Compile Include="Migrations\20190503191001_sadal.designer.cs">
+      <DependentUpon>20190503191001_sadal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PersonContextModelSnapshot.cs" />
     <Compile Include="Modals\Person.cs" />
     <Compile Include="Modals\PersonContext.cs" />
+    <Compile Include="Modals\Persons\Manager\ManagerFunc.cs" />
+    <Compile Include="Modals\Persons\Manager\ManagerModals.cs" />
+    <Compile Include="Modals\Product.cs" />
+    <Compile Include="Modals\Products\Mobile.cs" />
+    <Compile Include="Pages\Manager\ManageThePerson.xaml.cs">
+      <DependentUpon>ManageThePerson.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -191,6 +206,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

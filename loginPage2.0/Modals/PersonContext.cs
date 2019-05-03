@@ -10,6 +10,8 @@ namespace loginPage2._0.Modals
     class PersonContext : DbContext
     {
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Product> Products { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=DBLogin2.0;Trusted_Connection=True;");

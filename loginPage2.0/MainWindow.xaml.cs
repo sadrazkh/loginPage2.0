@@ -29,7 +29,16 @@ namespace loginPage2._0
         {
             using (var db = new Modals.PersonContext())
             {
-                var 
+                var res = db.Persons.Where(i => i.UserName == UserName.Text || i.Email == UserName.Text)
+                    .Where(i => i.Password == Password.Password).FirstOrDefault();
+
+                if (res != null)
+                {
+                    MessageBox.Show("Hi!");
+                }else
+                {
+                    MessageBox.Show("this username or password is incorect");
+                }
             }
         }
 
@@ -37,7 +46,7 @@ namespace loginPage2._0
         {
             using (var db = new Modals.PersonContext())
             {
-                db.Persons.Add(new Modals.Person { UserName = UserNameNew.Text, FullName = this.FullName.Text, Email = this.Email.Text, Password = this.PasswordNew.Password, PhoneNumber = this.PhoneNumber.Text });
+                db.Persons.Add(new Modals.Person() { UserName = UserNameNew.Text, FullName = this.FullName.Text, Email = this.Email.Text, Password = this.PasswordNew.Password, PhoneNumber = this.PhoneNumber.Text });
                 db.SaveChanges();
                 UserNameNew.Text = "";this.FullName.Text = "";this.Email.Text = "";this.PasswordNew.Password = "";this.PhoneNumber.Text = "";
             }
