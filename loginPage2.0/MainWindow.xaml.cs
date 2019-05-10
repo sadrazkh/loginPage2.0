@@ -31,7 +31,7 @@ namespace loginPage2._0
             {
                 var res = db.Persons.Where(i => i.UserName == UserName.Text || i.Email == UserName.Text)
                     .Where(i => i.Password == Password.Password).FirstOrDefault();
-
+                
                 if (res != null)
                 {
                     MessageBox.Show("Hi!");

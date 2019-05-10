@@ -12,6 +12,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+
         <GroupBox Grid.Column="0" Header="Login Option" TextBlock.TextAlignment="Center" FontSize="18">
             <StackPanel Margin="10 20"  >
                 <StackPanel Margin="10 20">
